@@ -16,6 +16,7 @@ class BankAccount {
         } else {
             echo "Invalid deposit amount. Please deposit a positive amount.\n";
         }
+        echo "<br>";
     }
 
     public function withdraw($amount) {
@@ -25,10 +26,12 @@ class BankAccount {
         } else {
             echo "Invalid withdrawal amount. Please enter a valid amount.\n";
         }
+        echo "<br>";
     }
 
     public function displayBalance() {
         echo "User: ".$this->user.", Balance: $".$this->balance."\n";
+        echo "<br>";
     }
 }
 
@@ -37,8 +40,10 @@ $account1 = new BankAccount("John Doe", 1000);
 $account1->displayBalance();  
 
 $account1->deposit(900);      
-$account1->withdraw(200);     
+$account1->withdraw(500);     
 
 $account1->displayBalance();  
+  
+
 
 ?>
